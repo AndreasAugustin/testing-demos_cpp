@@ -5,6 +5,10 @@ environment:
   matrix:
   - platform: x64
 
+before_build:
+- cmd: git submodule init
+- cmd: git submodule update
+
 build_script:
 - cmd: call "%VS140COMNTOOLS%\..\..\VC\vcvarsall.bat" %PLATFORM%
 - cmd: cmake -E make_directory build
