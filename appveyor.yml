@@ -3,7 +3,6 @@ os: Visual Studio 2015
 
 environment:
   matrix:
-  - platform: x86
   - platform: x64
 
 build_script:
