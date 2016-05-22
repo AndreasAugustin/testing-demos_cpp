@@ -1,0 +1,25 @@
+version: "{branch}-ci-{build}"
+os: Visual Studio 2015
+
+environment:
+  matrix:
+  - platform: x86
+  - platform: x64
+
+build_script:
+- cmd: call "%VS140COMNTOOLS%\..\..\VC\vcvarsall.bat" %PLATFORM%
+- cmd: cmake -E make_directory build
+- cmd: cmake -E chdir build cmake -G "NMake Makefiles" ..
+- cmd: cmake --build build
+
+branches:
+  only:
+  - master
+
+notifications:
+- provider: Email
+  to:
+  - andy.augustin@t-online.de
+  on_build_success: false
+  on_build_failure: true
+  on_build_status_changed: true
