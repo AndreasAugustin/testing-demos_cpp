@@ -21,5 +21,6 @@ before_install:
   - git submodule update
 
 script:
+  - rm -rf build
   - mkdir build && cd build && cmake .. && make
   - ./unittest

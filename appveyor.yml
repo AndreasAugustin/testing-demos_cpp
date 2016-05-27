@@ -11,7 +11,7 @@ before_build:
 
 build_script:
 - cmd: call "%VS140COMNTOOLS%\..\..\VC\vcvarsall.bat" %PLATFORM%
-- cmd: rmdir build /s
+- cmd: rmdir build /s /Q
 - cmd: cmake -E make_directory build
 - cmd: cmake -E chdir build cmake -G "NMake Makefiles" ..
 - cmd: cmake --build build
