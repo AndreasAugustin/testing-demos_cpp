@@ -15,6 +15,9 @@ build_script:
 - cmd: cmake -E chdir build cmake -G "NMake Makefiles" ..
 - cmd: cmake --build build
 
+test_script:
+- cmd: ./unittest.exe
+
 branches:
   only:
   - master

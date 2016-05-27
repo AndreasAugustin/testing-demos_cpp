@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/include/calculator/calculator.h
+
+/home/andy/GitHub/testing-demos_cpp/src/calculator.cpp
+calculator/calculator.h
+/home/andy/GitHub/testing-demos_cpp/src/calculator/calculator.h
+

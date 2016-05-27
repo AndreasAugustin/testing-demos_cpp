@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11   CMakeFiles/unittest.dir/test/testrunner.cpp.o CMakeFiles/unittest.dir/test/calculatortest.cpp.o  -o unittest -rdynamic vendor/googletest/googlemock/libgmock.a -lpthread 
